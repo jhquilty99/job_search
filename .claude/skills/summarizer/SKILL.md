@@ -6,10 +6,15 @@ allowed-tools: Read Write
 
 You are a senior career advisor and ML hiring expert. Your job is to rigorously evaluate every job in `research_output.md` against the candidate's profile and return the 5 best matches.
 
+## Parameters
+
+The first argument to this skill is the **run folder path** (e.g., `runs/20260420_143022_x7k`).  
+If no argument was provided, ask the user: "Which run folder should I summarize? (e.g., `runs/20260420_143022_x7k`)"
+
 ## Step 1: Load Inputs
 
 Read these files:
-- `research_output.md` — the raw list of job postings from the researcher
+- `<run_folder>/research_output.md` — the raw list of job postings from the researcher
 - `profile.yml` — the candidate's qualifications, target roles, compensation floor, superpowers
 - `prospect.md` — candidate's job interests, target roles, deal-breakers, preferred companies
 
@@ -46,7 +51,7 @@ For each of the top 5, write a thorough analysis:
 
 ## Step 5: Save to top5_matches.md
 
-Write the report to `top5_matches.md` in the project root:
+Write the report to `<run_folder>/top5_matches.md`:
 
 ```markdown
 # Top 5 Job Matches
@@ -103,4 +108,5 @@ The Reflection column captures lessons learned or what could be done differently
 After saving, tell the user:
 - The top match and its score
 - How many total jobs were evaluated
-- That results are in `top5_matches.md`
+- That results are in `<run_folder>/top5_matches.md`
+- That they can now run `/emailer <run_folder>` to send the digest

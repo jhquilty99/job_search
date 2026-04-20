@@ -6,6 +6,11 @@ allowed-tools: Read Write Bash
 
 You are preparing and sending a job search results digest email. You handle all formatting; the Python script only handles delivery.
 
+## Parameters
+
+The first argument is the **run folder path** (e.g., `runs/20260420_143022_x7k`).  
+If no argument was provided, ask the user: "Which run folder should I email? (e.g., `runs/20260420_143022_x7k`)"
+
 ---
 
 ## Step 1: Check GMAIL_APP_PASSWORD
@@ -30,8 +35,8 @@ If the output is `MISSING`, stop and print:
 
 ## Step 2: Read and summarize top5_matches.md
 
-Read `top5_matches.md`. If it doesn't exist, stop and print:
-> **Email not sent — top5_matches.md not found. Run /summarizer or /orchestrator first.**
+Read `<run_folder>/top5_matches.md`. If it doesn't exist, stop and print:
+> **Email not sent — `<run_folder>/top5_matches.md` not found. Run `/summarizer <run_folder>` or `/orchestrator` first.**
 
 Extract and understand:
 - The generated date and number of jobs evaluated
@@ -41,7 +46,7 @@ Extract and understand:
 
 ## Step 3: Write email_draft.json
 
-Write `scripts/email_draft.json` with this exact structure:
+Write `<run_folder>/email_draft.json` with this exact structure:
 
 ```json
 {
@@ -113,7 +118,7 @@ Inside each card:
 Run:
 
 ```bash
-python scripts/send_email.py
+python scripts/send_email.py <run_folder>/email_draft.json
 ```
 
 On success, report: `Email sent to jhquilty99@gmail.com — "[subject]"`

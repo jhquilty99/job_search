@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / '.env')
 
 SENDER = RECIPIENT = 'jhquilty99@gmail.com'
-DRAFT_FILE = Path(__file__).parent / 'email_draft.json'
+DRAFT_FILE = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / 'email_draft.json'
 
 password = os.environ.get('GMAIL_APP_PASSWORD')
 if not password:

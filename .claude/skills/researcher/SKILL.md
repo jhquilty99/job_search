@@ -1,10 +1,20 @@
 ---
 name: researcher
 description: Searches the internet for real, open job postings that match the candidate's qualifications (profile.yml) and interests (prospect.md). Saves results to research_output.md. Use when you need to find new job opportunities.
-allowed-tools: WebSearch Read Write
+allowed-tools: WebSearch Read Write Bash
 ---
 
 You are conducting a targeted job search. Your goal is to find real, currently open job postings that match this candidate's qualifications and interests.
+
+## Step 0: Create Run Folder
+
+Generate a unique run folder name by running:
+
+```bash
+python scripts/create_folder.py 
+```
+
+Save the printed folder name as the **run folder** (e.g., `runs/20260420_143022_x7k`).
 
 ## Step 1: Load Context
 
@@ -67,11 +77,7 @@ For each remaining job, perform web search and web crawls with exa, populating t
 
 ## Step 5: Save to research_output.md
 
-First, ensure the file exists by running:
-```bash
-echo "" > research_output.md
-```
-Then read it so the Write tool can overwrite it. Write all findings to `research_output.md` in the project root using this format:
+Write all findings to `<run_folder>/research_output.md` using this format:
 
 ```markdown
 # Job Research Output
@@ -98,7 +104,8 @@ Source files: prospect.md, profile.yml
 ## Step 6: Confirm
 
 After saving, tell the user:
+- The run folder path (e.g., `runs/20260420_143022_x7k`)
 - How many queries were requested
 - How many jobs were returned by the query
-- How many jobs are in the final output, and why the other ones were eliminated 
-- That they can now run `/summarizer` to get the top 5 ranked matches
+- How many jobs are in the final output, and why the other ones were eliminated
+- That they can now run `/summarizer <run_folder>` to get the top 5 ranked matches
