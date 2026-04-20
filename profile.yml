@@ -1,0 +1,35 @@
+# Career-Ops Profile Configuration
+# Copy this file to config/profile.yml and fill in your details.
+# This is the single source of truth for your personal data across all modes.
+
+candidate:
+  full_name: "John Hayden Quilty"
+  email: "jhquilty99@gmail.com"
+  phone: "+1 703-401-2068"
+  location: "Mount Vernon, VA"
+  linkedin: "linkedin.com/in/johnhquilty/"
+  portfolio_url: "https://haydenquilty.com"
+  github: "jhquilty99.github.io/blog"
+  visa_status: "US Citizen"
+
+narrative:
+  # Your professional headline (1 line)
+  headline: "Senior Machine Learning Engineer building production AI systems"
+  # Your exit story — what makes you unique
+  exit_story: "Bridging financial strategy and deep technical execution as one and only machine learning engineer while driving multi-million dollar AI impact in the insurtech space."
+  # Your top 3-5 superpowers
+  superpowers:
+    - "End-to-end AI architectures (LLMs, RAG, SageMaker)"
+    - "Workflow automation & MLOps infrastructure"
+    - "Cross-functional executive leadership"
+  # Proof points — projects, articles, case studies with measurable impact
+  proof_points:
+    - name: "Wholesale Workers Comp AI Agent"
+      url: "https://haydenquilty.com"
+      hero_metric: "Captured $1.2M in additional annual premium"
+    - name: "Homeowner Risk Assessment AI"
+      url: "https://haydenquilty.com"
+      hero_metric: "Reduced underwriting cycle time 19%"
+    - name: "Automated Underwriting Bug Remediation"
+      url: "https://haydenquilty.com"
+      hero_metric: "Prevented $1M in estimated annual losses"
