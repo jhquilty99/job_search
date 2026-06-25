@@ -15,8 +15,8 @@ If no argument was provided, ask the user: "Which run folder should I summarize?
 
 Read these files:
 - `<run_folder>/research_output.md` — the raw list of job postings from the researcher
-- `profile.yml` — the candidate's qualifications, target roles, compensation floor, superpowers
 - `prospect.md` — candidate's job interests, target roles, deal-breakers, preferred companies
+- `cv.md` — candidate's qualifications, superpowers, professional summary
 
 ## Step 2: Score Every Job
 
@@ -33,7 +33,7 @@ For each job in the research output, score it across 6 dimensions (each 0–10, 
 
 **Weighted score formula:** `(title*0.25) + (stack*0.25) + (comp*0.20) + (remote*0.15) + (company*0.10) + (growth*0.05)`
 
-**Auto-disqualify** any job that matches deal-breakers from prospect.md (pure analytics, below minimum comp, requires relocation, contract-only).
+**Auto-disqualify** any job that matches deal-breakers from prospect.md.
 
 ## Step 3: Rank and Select Top 5
 

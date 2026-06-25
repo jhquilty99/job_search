@@ -11,6 +11,7 @@
 
 ### Preferred Seniority
 - Entry level to senior level (1 to 7 years experience)
+- Base salary of $160k or more
 
 ### Must-Have Requirements
 - [ ] Compensation ≥ $160k base (total comp preferred)
@@ -58,6 +59,7 @@
 - Strongly consider hybrid and remote 
 - Open to hybrid (1-4 days/week) in major US metros
 - US and Europe only. Even remote roles must be based in this region.
+- Cities include New York, San Francisco, Seattle, London, Boulder, Chicago.
 
 ---
 
@@ -77,15 +79,6 @@
 - No-ML environments (traditional software shops calling themselves "AI")
 - Below $160k base
 - Heavily regulated industries with no ML autonomy (e.g. pure government)
-- Requires clearance status (e.g. TS-SCI)
+- Requires clearance status (e.g. TS-SCI) or other federal statuses
 
----
 
-## Keywords to Search
-
-Use these in web searches:
-- "Senior Machine Learning Engineer" remote OR "Lead ML Engineer" remote
-- "AI Engineer" insurtech OR fintech
-- "MLOps Engineer" LLM RAG
-- "Staff Data Scientist" production ML
-- site:linkedin.com/jobs OR site:greenhouse.io OR site:lever.co

@@ -4,11 +4,18 @@
 **Email:** jhquilty99@gmail.com
 **LinkedIn:** linkedin.com/in/johnhquilty/
 **Portfolio:** haydenquilty.com
-**GitHub:** jhquilty99.github.io/blog
+**GitHub:** https://github.com/jhquilty99/
+**Phone:** "+1 703-401-2068"
+**Visa Status:** "US Citizen"
 
 ## Professional Summary
 
-Data Science professional with extensive experience building production machine learning systems and architecting organizational technology. Proven track record in designing end-to-end AI systems, automating complex workflows, and deploying scalable cloud infrastructure.
+Data Science professional with extensive experience building production machine learning systems and architecting organizational technology. Proven track record in designing end-to-end AI systems, automating complex workflows, and deploying scalable cloud infrastructure. Bridging financial strategy and deep technical execution as one and only machine learning engineer while driving multi-million dollar AI impact in the insurtech space."
+
+Superpowers:
+- "End-to-end AI architectures (LLMs, RAG, SageMaker)"
+- "Workflow automation & MLOps infrastructure"
+- "Transforming business problems into AI solutions"
 
 ## Work Experience
 
@@ -30,6 +37,7 @@ May 2023 – Present
 - Owned the 0-to-1 machine learning lifecycle, managing critical trade-offs between performance, cost, and latency while utilizing AI-assisted engineering tools to accelerate iteration.
 - Established a rapid prototyping feedback loop by conducting direct user interviews with underwriters; translated qualitative feedback into quantitative metrics that improved precision by 25% for complex financial reasoning.
 - Developed technical collaborative and interactive workshops for diverse stakeholders, driving organizational alignment on AI transformation and presenting complex architectural concepts to both technical and non-technical audiences.
+- Our wholesale division was overwhelmed by submissions, hindering document parsing and underwriting. We built an agentic workflow to automate data ingestion and appetite matching. This saves 5–10 minutes per task, enabling 5,000+ more annual submissions and $1M+ in new earned premium for ISC.
 
 ### Root Inc -- Remote
 **Senior Data Analyst**

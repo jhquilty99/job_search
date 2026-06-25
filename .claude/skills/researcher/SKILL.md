@@ -18,22 +18,13 @@ Save the printed folder name as the **run folder** (e.g., `runs/20260420_143022_
 
 ## Step 1: Load Context
 
-Read both files from the project root:
+Read this files from the project root:
 - `prospect.md` — candidate's job interests, target roles, deal-breakers, preferred companies
-- `profile.yml` — candidate's qualifications, skills, experience, compensation target
 
-Extract the following signals:
-- Target role titles (primary, secondary, adjacent)
-- Core skills/tech stack to match
-- Minimum compensation ($160k+)
-- Location/remote requirements
-- Deal-breaker keywords to avoid
-- Industries and company types to target
-
-## Step 2: Run Targeted Web Searches
+## Step 2: Run Targeted Web Searches and Build Job List
 
 Using the exa web search tool, execute 6–10 diverse searches to maximize coverage. **Every search call MUST include:**
-- `freshness: "week"` — limits results to pages published/indexed in the last 7 days
+- `freshness: "72 hours"` — limits results to pages published/indexed in the last 7 days
 - `includeDomains: ["job-boards.greenhouse.io", "jobs.lever.co", "builtin.com", "jobs.ashbyhq.com", "climatedraft.org", "wellfound.com", "climatebase.org", "welcometothejungle.com", "idealist.org", "theimpactjob.com", "greenjobs.net", "data.org"]` — targets reliable job boards with accurate posting dates
 
 Use varied queries such as:
@@ -41,20 +32,12 @@ Use varied queries such as:
 - `Senior Machine Learning Engineer remote production LLM RAG open role`
 - `Lead ML Engineer LLM RAG remote hiring now`
 - `Senior AI Engineer insurtech OR fintech remote apply`
-- `Staff Data Scientist production MLOps remote`
+- `Data Scientist production MLOps remote`
 - `Machine Learning Engineer remote open role apply now`
 - `Senior ML Engineer OR Lead Data Scientist remote job posting`
 - `ML Engineer LLM SageMaker remote job`
 - Any searches derived from specific companies or industries listed in prospect.md
 - You do not need to include compensation targets in the query, but you can include location preferences
-
-For each search, scan the results and extract real, open postings. Skip sponsored content you cannot verify. Skip any result that appears closed or removed.
-
-Never run Exa searches in main context. Always spawn Task agents:
-- Agent returns distilled output (brief markdown or compact JSON)
-- Main context stays clean regardless of search volume
-
-## Step 3: Build the Raw Job List
 
 For each job found, capture:
 - **Title** — exact job title
@@ -68,14 +51,20 @@ For each job found, capture:
 - **Highest Level of Education** — bachelors, masters, phd, or not listed
 - **Date Posted** — if visible
 
-Aim for 15–50 unique postings. Prioritize variety (different companies, not 10 from the same company).
+Aim for 15–100 unique postings. Prioritize variety (different companies, not 10 from the same company).
 
-## Step 4. Refine List
-Eliminate jobs that are clearly outside of the user's job preferences, aiming for 5 to 10 highly qualified leads. 
-For each remaining job, perform web search and web crawls with exa, populating the full job description and filling in any unknown values. 
+For each search, scan the results and extract real, open postings. Skip sponsored content you cannot verify. Skip any result that appears closed or removed.
+
+Never run Exa searches in main context. Always spawn Task agents:
+- Agent returns distilled output (brief markdown or compact JSON)
+- Main context stays clean regardless of search volume
+
+## Step 3. Refine List
+Eliminate jobs that are clearly outside of the user's job preferences (dealbreakers, compensation, location), aiming for 5 to 15 highly qualified leads. 
+For each remaining job, perform just one additional web search and web crawls with exa, populating the full job description and filling in any unknown values. 
 
 
-## Step 5: Save to research_output.md
+## Step 4: Save to research_output.md
 
 Write all findings to `<run_folder>/research_output.md` using this format:
 

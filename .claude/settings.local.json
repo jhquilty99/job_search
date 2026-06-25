@@ -4,7 +4,8 @@
       "mcp__exa__web_search_exa",
       "mcp__exa__crawling_exa",
       "Skill(researcher)",
-      "Skill(summarizer)"
+      "Skill(summarizer)",
+      "mcp__exa__web_fetch_exa"
     ]
   }
 }
